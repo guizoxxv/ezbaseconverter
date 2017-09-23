@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>EZ Base Converter</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="EZ Base Converter. Easily convert numbers from one base to another.">
+    <meta name="keywords" content="ez, base, numerical base, converter, convert, number, numbers">
+    <meta name="author" content="guizo">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:100' rel='stylesheet'>
+    <link rel='stylesheet' href='css/style.css'>
+  </head>
+
+  <body class="colorful">
+
+    <div class='wrapper'>
+
+      <div class='header'>
+        <h1 id='title'>EZ Base Converter</h1>
+      </div>
+
+      <div class='main'>
+        <div class='main-content'>
+          <div class='hr row'></div>
+          <div class='input-group row'>
+            <div class='input-label'>
+              <label>From Base:</label>
+            </div>
+            <div class='input-input'>
+              <select id='frombase' class='input'>
+                <option value='' selected hidden>- Enter Base -</option>
+                <script>
+                    for(var b=2; b<=36; b++) {
+                      document.write('<option>'+b+'</option>');
+                    }
+                  </script>
+              </select>
+            </div>
+            <div class='input-icon'>
+              <i id='frombase-icon' class='fa fa-check-circle'></i>
+            </div>
+          </div>
+          <div class='input-group row'>
+            <div class='input-label'>
+              <label>Number:</label>
+            </div>
+            <div class='input-input'>
+              <input id='number' class='input' type='text' placeholder='- Enter Number -' style='text-transform:uppercase'>
+            </div>
+            <div class='input-icon'>
+              <i id='number-icon' class='fa fa-check-circle'></i>
+            </div>
+          </div>
+          <div class='input-group row'>
+            <div class='input-label'>
+              <label>To Base:</label>
+            </div>
+            <div class='input-input'>
+              <select id='tobase' class='input'>
+                <option value='' selected hidden>- Enter Base -</option>
+                <script>
+                    for(var b=2; b<=36; b++) {
+                      document.write('<option>'+b+'</option>');
+                    }
+                  </script>
+              </select>
+            </div>
+            <div class='input-icon'>
+              <i id='tobase-icon' class='fa fa-check-circle'></i>
+            </div>
+          </div>
+          <div class='hr row'></div>
+          <div class='result'>
+            <div class='result-title row'>
+              <h2>RESULT</h2>
+            </div>
+            <div id='result-convert' class='row'></div>
+            <div class='baseref row'>Base: <span id='baseref'></span></div>
+            <div class='hr row'></div>
+          </div>
+          <div class='tools row'>
+            <a id='copy-icon' href='#' data-clipboard-target='#result-convert' title='Copy result to clipboard'><i class='fa fa-clone auto-width'></i></a>
+            <span id='msg'>Error</span>
+            <a href='index.html' title='Refresh page'><i class='fa fa-refresh auto-width'></i></a>
+          </div>
+          <div class='hr row'></div>
+        </div>
+      </div>
+
+      <div class='footer'>
+        <p id="footnote"><i class="fa fa-code" aria-hidden="true"></i> with <i class='fa fa-heart'></i> by <a href="http://guizo-portfolio.kissr.com/" target="_blank" title="guizo`s page">guizo</a>. <a href="#">View on GitHub <i class="fa fa-github" aria-hidden="true"></i></a></p>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+    <script src='js/script.js'></script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86469614-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
